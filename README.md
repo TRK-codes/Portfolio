@@ -1,6 +1,10 @@
-# Data Scientist Portfolio
+# Tahreem Rashid - Data Scientist Portfolio
 
-A professional portfolio website for a data scientist, featuring a modern design with animations and responsive layout.
+A professional portfolio website for Tahreem Rashid, a Data Scientist, featuring a modern design with animations and responsive layout.
+
+## Live Demo
+
+You can view the live website at: https://work-1-sqiodhcchnuuibbb.prod-runtime.all-hands.dev/
 
 ## Features
 
@@ -35,17 +39,38 @@ A professional portfolio website for a data scientist, featuring a modern design
 
 ## Setup and Usage
 
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Customize the content to fit your personal information and projects
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TRK-codes/Portfolio.git
+   cd Portfolio
+   ```
+
+2. Run a local server:
+   ```bash
+   # Using Python
+   python -m http.server 8000
+   
+   # Using Node.js
+   npx serve
+   
+   # Using PHP
+   php -S localhost:8000
+   ```
+
+3. Open your browser and navigate to `http://localhost:8000`
 
 ## Customization
 
-- Replace placeholder images in the `assets/img` directory with your own
-- Update the resume PDF in the `assets/resume` directory
-- Modify the content in `index.html` to reflect your personal information
-- Adjust colors and styling in `css/style.css`
-- Customize animations and interactions in `js/main.js`
+- The website uses web links for images instead of local files for better performance
+- The resume is available in both HTML and PDF formats in the `assets/resume` directory
+- To customize:
+  - Modify the content in `index.html` to reflect your personal information
+  - Adjust colors and styling in `css/style.css`
+  - Customize animations and interactions in `js/main.js`
+  - Update the resume in `assets/resume/resume.html` and regenerate the PDF using wkhtmltopdf:
+    ```bash
+    wkhtmltopdf assets/resume/resume.html assets/resume/resume.pdf
+    ```
 
 ## License
 
