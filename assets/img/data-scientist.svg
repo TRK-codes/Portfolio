@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Data Scientist Illustration</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4e54c8" offset="0%"></stop>
+            <stop stop-color="#8f94fb" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#4e54c8" offset="0%"></stop>
+            <stop stop-color="#8f94fb" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Data-Scientist" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Elements -->
+        <circle id="Circle1" fill="url(#linearGradient-1)" opacity="0.1" cx="400" cy="300" r="250"></circle>
+        <circle id="Circle2" fill="url(#linearGradient-2)" opacity="0.05" cx="400" cy="300" r="350"></circle>
+        
+        <!-- Data Visualization Elements -->
+        <g id="DataViz" transform="translate(150, 100)">
+            <!-- Bar Chart -->
+            <rect x="0" y="300" width="40" height="100" fill="#4e54c8" opacity="0.8" rx="5"></rect>
+            <rect x="50" y="250" width="40" height="150" fill="#4e54c8" opacity="0.8" rx="5"></rect>
+            <rect x="100" y="200" width="40" height="200" fill="#4e54c8" opacity="0.8" rx="5"></rect>
+            <rect x="150" y="150" width="40" height="250" fill="#4e54c8" opacity="0.8" rx="5"></rect>
+            <rect x="200" y="220" width="40" height="180" fill="#4e54c8" opacity="0.8" rx="5"></rect>
+            
+            <!-- Line Chart -->
+            <path d="M300,300 L350,250 L400,270 L450,200 L500,180" stroke="#8f94fb" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="300" cy="300" r="8" fill="#8f94fb"></circle>
+            <circle cx="350" cy="250" r="8" fill="#8f94fb"></circle>
+            <circle cx="400" cy="270" r="8" fill="#8f94fb"></circle>
+            <circle cx="450" cy="200" r="8" fill="#8f94fb"></circle>
+            <circle cx="500" cy="180" r="8" fill="#8f94fb"></circle>
+            
+            <!-- Scatter Plot -->
+            <circle cx="320" cy="150" r="6" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="340" cy="170" r="8" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="360" cy="130" r="10" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="380" cy="160" r="7" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="400" cy="140" r="9" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="420" cy="120" r="6" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="440" cy="150" r="8" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="460" cy="130" r="7" fill="#4e54c8" opacity="0.6"></circle>
+            <circle cx="480" cy="110" r="9" fill="#4e54c8" opacity="0.6"></circle>
+        </g>
+        
+        <!-- Person Silhouette -->
+        <g id="Person" transform="translate(300, 150)">
+            <!-- Head -->
+            <circle cx="100" cy="80" r="60" fill="#333"></circle>
+            
+            <!-- Body -->
+            <path d="M100,140 L100,300 M60,180 L140,180 M40,350 L100,300 L160,350" stroke="#333" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            
+            <!-- Laptop -->
+            <rect x="60" y="200" width="80" height="60" fill="#555" rx="5"></rect>
+            <rect x="50" y="260" width="100" height="5" fill="#555" rx="2"></rect>
+            
+            <!-- Data Elements around person -->
+            <g id="DataElements" opacity="0.7">
+                <text x="-30" y="50" font-family="monospace" font-size="12" fill="#4e54c8">import pandas as pd</text>
+                <text x="-30" y="70" font-family="monospace" font-size="12" fill="#4e54c8">import numpy as np</text>
+                <text x="-30" y="90" font-family="monospace" font-size="12" fill="#4e54c8">from sklearn import *</text>
+                <text x="170" y="50" font-family="monospace" font-size="12" fill="#8f94fb">def train_model():</text>
+                <text x="170" y="70" font-family="monospace" font-size="12" fill="#8f94fb">    return model.fit(X, y)</text>
+                
+                <text x="170" y="200" font-family="monospace" font-size="12" fill="#4e54c8">accuracy = 0.95</text>
+                <text x="170" y="220" font-family="monospace" font-size="12" fill="#4e54c8">precision = 0.92</text>
+                <text x="170" y="240" font-family="monospace" font-size="12" fill="#4e54c8">recall = 0.89</text>
+                
+                <text x="-30" y="200" font-family="monospace" font-size="12" fill="#8f94fb">class NeuralNetwork:</text>
+                <text x="-30" y="220" font-family="monospace" font-size="12" fill="#8f94fb">    def __init__(self):</text>
+                <text x="-30" y="240" font-family="monospace" font-size="12" fill="#8f94fb">        self.layers = []</text>
+            </g>
+        </g>
+        
+        <!-- Floating Data Elements -->
+        <g id="FloatingElements">
+            <circle cx="100" cy="100" r="15" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="150" cy="150" r="10" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="700" cy="200" r="20" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="650" cy="450" r="15" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="200" cy="500" r="25" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="300" cy="50" r="10" fill="#4e54c8" opacity="0.2"></circle>
+            <circle cx="500" cy="550" r="20" fill="#4e54c8" opacity="0.2"></circle>
+            
+            <text x="90" y="105" font-family="monospace" font-size="10" fill="#4e54c8">01</text>
+            <text x="140" y="155" font-family="monospace" font-size="8" fill="#4e54c8">10</text>
+            <text x="690" y="205" font-family="monospace" font-size="12" fill="#4e54c8">01</text>
+            <text x="640" y="455" font-family="monospace" font-size="10" fill="#4e54c8">10</text>
+            <text x="190" y="505" font-family="monospace" font-size="14" fill="#4e54c8">01</text>
+            <text x="290" y="55" font-family="monospace" font-size="8" fill="#4e54c8">10</text>
+            <text x="490" y="555" font-family="monospace" font-size="12" fill="#4e54c8">01</text>
+        </g>
+    </g>
+</svg>
