@@ -6,6 +6,8 @@ A professional portfolio website for Tahreem Rashid, a Data Scientist, featuring
 
 You can view the live website at: https://work-1-sqiodhcchnuuibbb.prod-runtime.all-hands.dev/
 
+The portfolio showcases Tahreem Rashid's expertise as a Data Scientist with a focus on machine learning, deep learning, and AI applications.
+
 ## Features
 
 - Responsive design that works on all devices
