@@ -1,3 +1,109 @@
+// Project data
+const projectsData = [
+    {
+        id: 1,
+        title: "Predictive Analytics for Healthcare",
+        image: "https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_1280.jpg",
+        description: "Developed a machine learning model to predict patient readmission rates with 92% accuracy, helping hospitals optimize resource allocation and improve patient care outcomes.",
+        longDescription: "This project involved analyzing over 100,000 patient records to identify key factors contributing to hospital readmissions. Using a combination of structured medical data and unstructured clinical notes, I built a predictive model that helps healthcare providers identify high-risk patients and implement targeted interventions.",
+        features: [
+            "Preprocessing of complex medical data including lab results, medications, and demographics",
+            "Feature engineering to extract meaningful patterns from clinical notes using NLP",
+            "Implementation of ensemble models (Random Forest, XGBoost) with hyperparameter tuning",
+            "Development of an interactive dashboard for healthcare providers to visualize risk factors",
+            "Deployment of the model as a REST API for integration with hospital EMR systems"
+        ],
+        techStack: ["Python", "TensorFlow", "SQL", "Scikit-learn", "Flask", "Docker"],
+        demoLink: "#",
+        githubLink: "#"
+    },
+    {
+        id: 2,
+        title: "NLP-Powered Customer Sentiment Analysis",
+        image: "https://cdn.pixabay.com/photo/2017/12/11/15/34/binary-3012331_1280.jpg",
+        description: "Built an end-to-end sentiment analysis system for a Fortune 500 company, processing over 10,000 customer reviews daily.",
+        longDescription: "This project involved developing a sophisticated natural language processing system to analyze customer sentiment across multiple channels including social media, product reviews, and support tickets. The system provides real-time insights into customer satisfaction and identifies emerging issues.",
+        features: [
+            "Fine-tuned BERT model for domain-specific sentiment classification with 91% accuracy",
+            "Implemented aspect-based sentiment analysis to identify specific product/service components mentioned",
+            "Created a streaming pipeline to process data from multiple sources in real-time",
+            "Developed visualization dashboards for business stakeholders to track sentiment trends",
+            "Automated alert system for detecting significant sentiment shifts requiring immediate attention"
+        ],
+        techStack: ["BERT", "PyTorch", "AWS", "Kafka", "Elasticsearch", "React"],
+        demoLink: "#",
+        githubLink: "#"
+    },
+    {
+        id: 3,
+        title: "Time Series Forecasting for Financial Markets",
+        image: "https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg",
+        description: "Implemented a LSTM-based deep learning model for stock price prediction, outperforming traditional ARIMA models by 35%.",
+        longDescription: "This project focused on developing advanced time series forecasting models for financial market prediction. By combining traditional statistical methods with deep learning approaches, I created a hybrid model that captures both linear and non-linear patterns in market data.",
+        features: [
+            "Preprocessing of financial time series data including handling of missing values and outliers",
+            "Feature engineering incorporating technical indicators, market sentiment, and macroeconomic factors",
+            "Implementation of LSTM networks with attention mechanisms for improved sequence modeling",
+            "Ensemble approach combining predictions from multiple models (ARIMA, Prophet, LSTM)",
+            "Backtesting framework to evaluate model performance across different market conditions"
+        ],
+        techStack: ["Keras", "Pandas", "Plotly", "NumPy", "StatsModels", "TensorFlow"],
+        demoLink: "#",
+        githubLink: "#"
+    },
+    {
+        id: 4,
+        title: "Computer Vision for Retail Analytics",
+        image: "https://cdn.pixabay.com/photo/2018/09/18/11/19/artificial-intelligence-3685928_1280.png",
+        description: "Created a computer vision system to analyze customer behavior in retail environments, increasing conversion rates by 18%.",
+        longDescription: "This project involved developing a computer vision system that analyzes in-store customer behavior to provide retailers with actionable insights. The system uses object detection and tracking to understand customer movement patterns, product interactions, and purchase decisions.",
+        features: [
+            "Implementation of YOLOv5 for real-time person and object detection from store cameras",
+            "Development of custom tracking algorithms to follow customer journeys throughout the store",
+            "Heat map generation to visualize high-traffic areas and product engagement",
+            "Integration with point-of-sale data to correlate browsing behavior with purchases",
+            "Privacy-preserving architecture that anonymizes all customer data"
+        ],
+        techStack: ["OpenCV", "TensorFlow", "Docker", "PyTorch", "CUDA", "Flask"],
+        demoLink: "#",
+        githubLink: "#"
+    },
+    {
+        id: 5,
+        title: "Recommendation System for E-commerce",
+        image: "https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg",
+        description: "Designed a hybrid recommendation system combining collaborative filtering and content-based approaches, improving user engagement by 27%.",
+        longDescription: "This project focused on developing a sophisticated recommendation engine for a large e-commerce platform. The system combines multiple recommendation strategies to provide personalized product suggestions based on user behavior, preferences, and product characteristics.",
+        features: [
+            "Implementation of matrix factorization techniques for collaborative filtering",
+            "Development of content-based recommendation using product metadata and descriptions",
+            "Integration of contextual factors (time, device, location) to improve recommendation relevance",
+            "A/B testing framework to evaluate recommendation performance in production",
+            "Scalable architecture handling millions of users and products with sub-second response times"
+        ],
+        techStack: ["PySpark", "MLlib", "MongoDB", "Scala", "Redis", "Airflow"],
+        demoLink: "#",
+        githubLink: "#"
+    },
+    {
+        id: 6,
+        title: "Anomaly Detection in IoT Sensor Data",
+        image: "https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_1280.jpg",
+        description: "Implemented an unsupervised learning approach to detect anomalies in IoT sensor data, reducing false alarms by 65%.",
+        longDescription: "This project involved developing an anomaly detection system for industrial IoT sensors. The system processes streaming data from thousands of sensors to identify equipment malfunctions, predict maintenance needs, and prevent costly downtime.",
+        features: [
+            "Implementation of multiple anomaly detection algorithms (Isolation Forest, DBSCAN, Autoencoders)",
+            "Development of a real-time processing pipeline for high-frequency sensor data",
+            "Adaptive thresholding techniques that adjust to changing operational conditions",
+            "Explainable AI components to help technicians understand the nature of detected anomalies",
+            "Integration with maintenance management systems for automated work order generation"
+        ],
+        techStack: ["Scikit-learn", "Kafka", "Grafana", "TensorFlow", "InfluxDB", "Python"],
+        demoLink: "#",
+        githubLink: "#"
+    }
+];
+
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS (Animate On Scroll)
@@ -200,215 +306,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Form Submission (prevent default for demo)
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const formValues = Object.fromEntries(formData.entries());
-            
-            // Show success message (in a real application, you would send this data to a server)
-            alert('Thank you for your message! In a real application, this would be sent to a server.');
-            
-            // Reset form
-            this.reset();
+    // Project Links Functionality
+    const projectLinks = document.querySelectorAll('.project-links a');
+    
+    if (projectLinks) {
+        projectLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // For demo purposes, prevent default navigation
+                if (this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                }
+            });
         });
     }
     
-    // Projects Section Functionality
-    const projectCards = document.querySelectorAll('.project-card');
-    const projectModal = document.getElementById('projectModal');
-    
-    // Project data
-    const projectsData = [
-        {
-            id: 1,
-            title: "Computer Vision Healthcare System",
-            shortDescription: "Medical image analysis system for early disease detection.",
-            fullDescription: "This computer vision system uses deep learning to analyze medical images for early disease detection. Built with TensorFlow and OpenCV, it achieves 94% accuracy in identifying potential health issues from X-rays, MRIs, and other medical imaging. The system includes a Flask backend API and React frontend for healthcare professionals to review results and manage patient data securely.",
-            image: "https://cdn.pixabay.com/photo/2018/01/28/10/59/internet-3113279_1280.jpg",
-            tags: ["Python", "TensorFlow", "OpenCV", "Flask", "React"],
-            features: [
-                "Automated disease detection from X-rays and MRIs",
-                "Real-time analysis with 94% accuracy",
-                "Interactive visualization of detected anomalies",
-                "Secure patient data management",
-                "Integration with hospital management systems"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            id: 2,
-            title: "Predictive Analytics Dashboard",
-            shortDescription: "Real-time business intelligence platform with predictive capabilities.",
-            fullDescription: "This predictive analytics dashboard provides businesses with real-time insights and forecasting capabilities. Built with Python and R for backend analytics and React with D3.js for the frontend visualization, it enables data-driven decision making. The platform processes streaming data to provide up-to-date metrics, predictive sales forecasting, and customer segmentation analysis.",
-            image: "https://cdn.pixabay.com/photo/2017/12/11/15/34/binary-3012331_1280.jpg",
-            tags: ["Python", "R", "D3.js", "PostgreSQL", "React"],
-            features: [
-                "Real-time data processing",
-                "Predictive sales forecasting",
-                "Customer segmentation",
-                "Interactive data visualization",
-                "Automated reporting"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            id: 3,
-            title: "Distributed Database System",
-            shortDescription: "High-performance distributed database with real-time analytics.",
-            fullDescription: "This distributed database system provides high performance and reliability for data-intensive applications. Built primarily in Java with support for both SQL (PostgreSQL) and NoSQL (MongoDB) data models, it offers flexible data storage options. The system includes real-time data processing with Kafka, in-memory caching with Redis, and automatic failover mechanisms.",
-            image: "https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg",
-            tags: ["Java", "PostgreSQL", "MongoDB", "Redis", "Kafka"],
-            features: [
-                "Horizontal scaling across multiple nodes",
-                "Real-time data processing",
-                "Automatic failover and recovery",
-                "Multi-model data support (SQL and NoSQL)",
-                "Built-in analytics engine"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            id: 4,
-            title: "NLP-Powered Customer Service Bot",
-            shortDescription: "Intelligent customer service automation with natural language processing.",
-            fullDescription: "This NLP-powered customer service bot automates support interactions while maintaining a natural conversational experience. Built using Python with TensorFlow and BERT for natural language understanding, it accurately interprets customer inquiries and provides relevant responses. The system includes sentiment analysis to detect customer frustration and automated ticket classification for efficient routing.",
-            image: "https://cdn.pixabay.com/photo/2018/09/18/11/19/artificial-intelligence-3685928_1280.png",
-            tags: ["Python", "TensorFlow", "BERT", "Flask", "React"],
-            features: [
-                "Natural language understanding",
-                "Sentiment analysis",
-                "Automated ticket classification",
-                "Multi-language support",
-                "Integration with CRM systems"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            id: 5,
-            title: "Financial Data Analysis Platform",
-            shortDescription: "Comprehensive financial data analysis and visualization tool.",
-            fullDescription: "This financial data analysis platform provides comprehensive tools for investment professionals and financial analysts. Built with Python and R for data processing and statistical modeling, it offers advanced capabilities for stock market analysis, portfolio optimization, and risk assessment. The platform includes interactive dashboards built with D3.js for visualizing financial data and trends.",
-            image: "https://cdn.pixabay.com/photo/2018/05/18/15/30/web-design-3411373_1280.jpg",
-            tags: ["Python", "R", "Pandas", "D3.js", "MongoDB"],
-            features: [
-                "Stock market data analysis",
-                "Portfolio optimization",
-                "Risk assessment models",
-                "Interactive financial dashboards",
-                "Automated trading strategy backtesting"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        },
-        {
-            id: 6,
-            title: "IoT Data Processing Pipeline",
-            shortDescription: "Scalable IoT data processing and analytics system.",
-            fullDescription: "This IoT data processing pipeline handles large volumes of sensor data for real-time analytics and monitoring. Built with Kafka for data ingestion, Spark for stream processing, and MongoDB for storage, it scales to support thousands of connected devices. The system includes sophisticated anomaly detection algorithms to identify unusual patterns and predictive maintenance models to forecast equipment failures.",
-            image: "https://cdn.pixabay.com/photo/2017/07/10/23/43/question-mark-2492009_1280.jpg",
-            tags: ["Python", "Kafka", "Spark", "MongoDB", "Grafana"],
-            features: [
-                "Real-time data ingestion from thousands of sensors",
-                "Stream processing for immediate insights",
-                "Anomaly detection algorithms",
-                "Time-series data visualization",
-                "Predictive maintenance modeling"
-            ],
-            demoLink: "#",
-            githubLink: "#"
-        }
-    ];
-    
-    // Toggle project details
-    document.querySelectorAll('.project-expand').forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const card = toggle.closest('.project-card');
-            card.classList.toggle('expanded');
-            
-            // Toggle icon rotation
-            const icon = toggle.querySelector('i');
-            if (card.classList.contains('expanded')) {
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-            } else {
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            }
+    // Form Submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Form will be submitted to the action URL
+            // No need to prevent default as we want the form to actually submit
         });
-    });
-    
-    // Open project modal
-    document.querySelectorAll('.learn-more-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const projectId = parseInt(btn.getAttribute('data-project-id'));
-            const project = projectsData.find(p => p.id === projectId);
-            
-            if (project) {
-                // Populate modal with project data
-                document.querySelector('.project-modal-image img').src = project.image;
-                document.querySelector('.project-modal-image img').alt = project.title;
-                document.getElementById('projectModalLabel').textContent = project.title;
-                
-                // Clear and populate tech stack
-                const techStackContainer = document.querySelector('.project-modal-tags');
-                techStackContainer.innerHTML = '';
-                project.tags.forEach(tag => {
-                    const span = document.createElement('span');
-                    span.className = 'badge bg-light text-dark me-2 mb-2';
-                    span.textContent = tag;
-                    techStackContainer.appendChild(span);
-                });
-                
-                // Set description
-                document.querySelector('.project-modal-description').textContent = project.fullDescription;
-                
-                // Clear and populate features
-                const featuresList = document.querySelector('.project-features-list');
-                featuresList.innerHTML = '';
-                project.features.forEach(feature => {
-                    const li = document.createElement('li');
-                    li.textContent = feature;
-                    featuresList.appendChild(li);
-                });
-                
-                // Set links
-                document.querySelector('.modal-github-link').href = project.githubLink;
-                document.querySelector('.modal-demo-link').href = project.demoLink;
-                
-                // Show modal
-                const modal = new bootstrap.Modal(document.getElementById('projectModal'));
-                modal.show();
-            }
-        });
-    });
-    
-    // Add animation to project cards on hover
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-10px)';
-            card.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            if (!card.classList.contains('expanded')) {
-                card.style.transform = 'translateY(0)';
-                card.style.boxShadow = 'var(--box-shadow)';
-            }
-        });
-    });
+    }
     
     // Add animation to skill bars
     const skillBars = document.querySelectorAll('.progress-bar');
