@@ -2,6 +2,11 @@
 
 A professional portfolio website for Tahreem Rashid, a Data Scientist, featuring a modern design with animations and responsive layout.
 
+## Demo:
+
+### Home Page:
+<img width="1916" height="883" alt="image" src="https://github.com/user-attachments/assets/2fda83eb-430c-4aa5-a8e5-57cd4afbfa70" />
+
 ## Features
 
 - Responsive design that works on all devices
